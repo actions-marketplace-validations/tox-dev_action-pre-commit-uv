@@ -10,13 +10,13 @@ jobs:
   main-uvx:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - name: self test action (uvx path)
       uses: ./
   main-uv-run:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - run: printf '[project]\nname = "test"\nversion = "0.0.0"\nrequires-python = ">=3.13"\n' > pyproject.toml
       shell: bash
     - name: self test action (uv run path)
@@ -24,7 +24,7 @@ jobs:
   main-external-uv:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - uses: astral-sh/setup-uv@v7
     - name: self test action (external uv)
       uses: ./
